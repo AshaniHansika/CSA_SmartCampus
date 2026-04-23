@@ -47,7 +47,7 @@
     </dependencies>
 
     <build>
-        <finalName>smartcampus</finalName>
+        <finalName>ROOT</finalName>
         <plugins>
             <!-- Maven Compiler Plugin -->
             <plugin>
@@ -63,6 +63,21 @@
                 <version>3.3.2</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+            <!-- Jetty Maven Plugin (Option 1: Terminal Run) -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.44.v20210927</version>
+                <configuration>
+                    <webApp>
+                        <contextPath>/</contextPath>
+                    </webApp>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <stopKey>stop</stopKey>
+                    <stopPort>9999</stopPort>
                 </configuration>
             </plugin>
         </plugins>

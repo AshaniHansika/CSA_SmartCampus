@@ -32,3 +32,10 @@ Thumbs.db
 *.jar
 *.war
 *.ear
+
+# Coursework specific
+COURSEWORK_PLAN.md
+SmartCampus_Postman_Collection.json
+implementation_plan.md
+task.md
+walkthrough.md
